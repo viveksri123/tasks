@@ -1,1 +1,33 @@
+PS C:\Users\USTUser\Desktop\task\new> git config user.name
+viveksri123
+PS C:\Users\USTUser\Desktop\task> cd C:\Users\USTUser\Desktop\task\new
+PS C:\Users\USTUser\Desktop\task\new> dir
+
+
+    Directory: C:\Users\USTUser\Desktop\task\new
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          1/8/2022   2:39 PM              0 sample1.txt
+-a----          1/8/2022   2:39 PM              0 sample2.txt
+-a----          1/8/2022   2:39 PM              0 sample3.txt
+
+
+PS C:\Users\USTUser\Desktop\task\new> git init
+Initialized empty Git repository in C:/Users/USTUser/Desktop/task/new/.git/
+PS C:\Users\USTUser\Desktop\task\new> git add .
+PS C:\Users\USTUser\Desktop\task\new> git commit -m 'pro2'
+[master (root-commit) 28c43c4] pro2
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sample1.txt
+ create mode 100644 sample2.txt
+ create mode 100644 sample3.txt
+PS C:\Users\USTUser\Desktop\task\new> git config user.name
+viveksri123
+PS C:\Users\USTUser\Desktop\task\new> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\USTUser\Desktop\task\new> git branch
+*master
 
