@@ -1,0 +1,243 @@
+ubuntu@ip-172-31-42-161:~$ cd getting-started/
+ubuntu@ip-172-31-42-161:~/getting-started$ cd app
+ubuntu@ip-172-31-42-161:~/getting-started/app$ docker build -t getting-started .
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2ar%2Frun%2Fdocker.sock/v1.24/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpetmems=&cpushares=0&dockerfile=Dockerfile&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&shmsize=0&t=getting-arted&target=&ulimits=null&version=1: dial unix /var/run/docker.sock: connect: permission denied
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker build -t getting-started .
+Sending build context to Docker daemon  65.22MB
+Step 1/6 : FROM node:12-alpine
+ ---> 106bb94759ad
+Step 2/6 : RUN apk add --no-cache python2 g++ make
+ ---> Using cache
+ ---> 10ecb97da45f
+Step 3/6 : WORKDIR /app
+ ---> Using cache
+ ---> 4d2cfac3893e
+Step 4/6 : COPY . .
+ ---> 14a2ecfc8bed
+Step 5/6 : RUN yarn install --production
+ ---> Running in 97fbb401dcc0
+yarn install v1.22.17
+[1/4] Resolving packages...
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^3.0.0"
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+Done in 10.20s.
+Removing intermediate container 97fbb401dcc0
+ ---> dd467131cf7a
+Step 6/6 : CMD ["node", "src/index.js"]
+ ---> Running in 7d651fbb1676
+Removing intermediate container 7d651fbb1676
+ ---> 71363a563039
+Successfully built 71363a563039
+Successfully tagged getting-started:latest
+ubuntu@ip-172-31-42-161:~/getting-started/app$ docker run -dp 3000:3000 `-w /app -v "$(pwd):/app"` node:12-alpine `sh -cyarn install && yarn run dev"`
+-w: command not found
+sh: 1: yarn: not found
+
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post hp://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create: dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+ubuntu@ip-172-31-42-161:~/getting-started/app$
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker run -dp 3000:3000 `-w /app -v "$(pwd):/app"` node:12-alpine ` -c "yarn install && yarn run dev"`
+-w: command not found
+sh: 1: yarn: not found
+f49e7891ef175d8a47218c58e10fb3e2ba1597bb0bbc0ebe774e473392a242b3
+ubuntu@ip-172-31-42-161:~/getting-started/app$ ^C
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker run -dp 3000:3000 -w /app -v "$(pwd):/app" node:12-alpine sh  "yarn install && yarn run dev"
+bd444feff9e703a4eb3df76fe86f4ac2978388f0d9086f7102b986293c628036
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker container ls
+CONTAINER ID   IMAGE            COMMAND                  CREATED              STATUS              PORTS                                     NAMES
+bd444feff9e7   node:12-alpine   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3000->3000/tcp:::3000->3000/tcp   keen_yalow
+ubuntu@ip-172-31-42-161:~/getting-started/app$
+ubuntu@ip-172-31-42-161:~$ cd getting-started/
+ubuntu@ip-172-31-42-161:~/getting-started$ cd app
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker run -d network todo-app --network
+ubuntu@ip-172-31-42-161:~$ docker run -d --network todo-app --network-alias mysql -v todo-mysql-data:/var/lib/mysql -e MQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=todos mysql:5.7
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post hp://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create: dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+ubuntu@ip-172-31-42-161:~$ sudo docker run -d --network todo-app --network-alias mysql -v todo-mysql-data:/var/lib/mysqle MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=todos mysql:5.7
+Unable to find image 'mysql:5.7' locally
+5.7: Pulling from library/mysql
+72a69066d2fe: Pull complete
+93619dbc5b36: Pull complete
+99da31dd6142: Pull complete
+626033c43d70: Pull complete
+37d5d7efb64e: Pull complete
+ac563158d721: Pull complete
+d2ba16033dad: Pull complete
+0ceb82207cd7: Pull complete
+37f2405cae96: Pull complete
+e2482e017e53: Pull complete
+70deed891d42: Pull complete
+Digest: sha256:f2ad209efe9c67104167fc609cca6973c8422939491c9345270175a300419f94
+Status: Downloaded newer image for mysql:5.7
+76b7f3f81f2b86cd96b6bd8d667875a82687aa2d06fd17407bf4b9ad41f3ff92
+docker: Error response from daemon: network todo-app not found.
+ubuntu@ip-172-31-42-161:~$ docker ps
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fr%2Frun%2Fdocker.sock/v1.24/containers/json: dial unix /var/run/docker.sock: connect: permission denied
+ubuntu@ip-172-31-42-161:~$ sudo docker ps
+CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+bd444feff9e7   node:12-alpine   "docker-entrypoint.s…"   57 minutes ago   Up 57 minutes   0.0.0.0:3000->3000/tcp, :::300>3000/tcp   keen_yalow
+ubuntu@ip-172-31-42-161:~$
+ubuntu@ip-172-31-42-161:~$ cd getting-started/
+.git/    .github/ app/     docs/
+ubuntu@ip-172-31-42-161:~$ cd getting-started/
+ubuntu@ip-172-31-42-161:~/getting-started$ cd app
+ubuntu@ip-172-31-42-161:~/getting-started/app$ docker network create todo-app
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2ar%2Frun%2Fdocker.sock/v1.24/networks/create: dial unix /var/run/docker.sock: connect: permission denied
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker network create todo-app
+49780735c92ba83957344b19c0886fa95fdfbe0edd2cd6cc4b34203a683d4b1a
+ubuntu@ip-172-31-42-161:~/getting-started/app$  sudo docker run -d --network todo-app --network-alias mysql -v todo-mysqdata:/var/lib/mysql ` -e MYSQL_ROOT_PASSWORD=secret ` -e MYSQL_DATABASE=todos mysql:5.7
+-e: command not found
+f689bd439e0a1045c87b1c2d577af5dbc4e8f668f0bcb1934004a9bb0ced4fe4
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker ps
+CONTAINER ID   IMAGE            COMMAND                  CREATED       STATUS       PORTS                                     NAMES
+bd444feff9e7   node:12-alpine   "docker-entrypoint.s…"   2 hours ago   Up 2 hours   0.0.0.0:3000->3000/tcp, :::3000->300tcp   keen_yalow
+ubuntu@ip-172-31-42-161:~/getting-started/app$  docker run -d --network todo-app --network-alias mysql -v todo-mysql-dat/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=todos mysql:5.7
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post hp://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create: dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+ubuntu@ip-172-31-42-161:~/getting-started/app$  sudo docker run -d --network todo-app --network-alias mysql -v todo-mysqdata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=todos mysql:5.7
+5d1d82788e3a9387e9161ebf26801b403c7355e025287738c761a5240366c0d7
+ubuntu@ip-172-31-42-161:~/getting-started/app$ docker ps
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fr%2Frun%2Fdocker.sock/v1.24/containers/json: dial unix /var/run/docker.sock: connect: permission denied
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker ps
+CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+5d1d82788e3a   mysql:5.7        "docker-entrypoint.s…"   27 seconds ago   Up 25 seconds   3306/tcp, 33060/tcp                       objective_chatterjee
+bd444feff9e7   node:12-alpine   "docker-entrypoint.s…"   2 hours ago      Up 2 hours      0.0.0.0:3000->3000/tcp, :::300>3000/tcp   keen_yalow
+ubuntu@ip-172-31-42-161:~/getting-started/app$  docker exec -it 5d1d82788e3a  mysql -u root -p
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fr%2Frun%2Fdocker.sock/v1.24/containers/5d1d82788e3a/json: dial unix /var/run/docker.sock: connect: permission denied
+ubuntu@ip-172-31-42-161:~/getting-started/app$ docker exec -it 5d1d82788e3a  mysql -u root -p
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fr%2Frun%2Fdocker.sock/v1.24/containers/5d1d82788e3a/json: dial unix /var/run/docker.sock: connect: permission denied
+ubuntu@ip-172-31-42-161:~/getting-started/app$ docker exec -it 5d1d82788e3a  mysql -u root -p
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fr%2Frun%2Fdocker.sock/v1.24/containers/5d1d82788e3a/json: dial unix /var/run/docker.sock: connect: permission denied
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker exec -it 5d1d82788e3a mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.36 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| todos              |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql>
+ubuntu@ip-172-31-42-161:~$ cd getting-started/\
+>
+ubuntu@ip-172-31-42-161:~/getting-started$ cd app
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker run -it --network todo-app nicolaka/netshoot
+Unable to find image 'nicolaka/netshoot:latest' locally
+latest: Pulling from nicolaka/netshoot
+97518928ae5f: Already exists
+09706d35e05d: Pull complete
+4996ecc64030: Pull complete
+9a11de879aaa: Pull complete
+44f8e61e69d1: Pull complete
+dcf41a6beeb6: Pull complete
+d4d3a508f57b: Pull complete
+ca86b0e825d1: Pull complete
+7eeba344c2b1: Pull complete
+c52dc2d61c4a: Pull complete
+d04aa1a002c2: Pull complete
+7070cabd1e04: Pull complete
+Digest: sha256:d6942ec583d8e2818f5a5d7a71c303e861a70a11396ad9e9d25b355842e97589
+Status: Downloaded newer image for nicolaka/netshoot:latest
+                    dP            dP                           dP
+                    88            88                           88
+88d888b. .d8888b. d8888P .d8888b. 88d888b. .d8888b. .d8888b. d8888P
+88'  `88 88ooood8   88   Y8ooooo. 88'  `88 88'  `88 88'  `88   88
+88    88 88.  ...   88         88 88    88 88.  .88 88.  .88   88
+dP    dP `88888P'   dP   `88888P' dP    dP `88888P' `88888P'   dP
+
+Welcome to Netshoot! (github.com/nicolaka/netshoot)
+
+
+
+ 8bfe0283b8d4 ► ~ ► dig mysql
+
+; <<>> DiG 9.16.22 <<>> mysql
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 18611
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;mysql.                         IN      A
+
+;; ANSWER SECTION:
+mysql.                  600     IN      A       172.18.0.2
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.11#53(127.0.0.11)
+;; WHEN: Wed Dec 29 09:58:41 UTC 2021
+;; MSG SIZE  rcvd: 44
+
+
+ 8bfe0283b8d4 ► ~ ► exit
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker run -dp 3000:3000 -w /app -v "$(pwd):/app" --network todo-appe MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=secret -e MYSQL_DB=todos node:12-alpine sh -c "yarn install && yn run dev"
+06e28523cf4d7ff552e2f2718c395c26276d042350862c713f5a323bef4f7a43
+docker: Error response from daemon: driver failed programming external connectivity on endpoint agitated_mcnulty (fe229296483eddf1b4cfdd5215f8969ff52025989b35a31e8c6ae8d49a68c0): Bind for 0.0.0.0:3000 failed: port is already allocated.
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker run -dp 3001:3000 -w /app -v "$(pwd):/app" --network todo-appe MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=secret -e MYSQL_DB=todos node:12-alpine sh -c "yarn install && yn run dev"
+1486f603ad70a42c500efac8be64a20b07b037a5effe297d3a00f16bdf9980cd
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker ps
+CONTAINER ID   IMAGE            COMMAND                  CREATED              STATUS              PORTS                                     NAMES
+1486f603ad70   node:12-alpine   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3001->3000/tcp:::3001->3000/tcp   practical_franklin
+5d1d82788e3a   mysql:5.7        "docker-entrypoint.s…"   About an hour ago    Up About an hour    3306/tcp, 33060/tcp                       objective_chatterjee
+bd444feff9e7   node:12-alpine   "docker-entrypoint.s…"   3 hours ago          Up 3 hours          0.0.0.0:3000->3000/tcp:::3000->3000/tcp   keen_yalow
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker logs 1486f603ad70
+yarn install v1.22.17
+[1/4] Resolving packages...
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^3.0.0"
+success Already up-to-date.
+Done in 0.60s.
+yarn run v1.22.17
+$ nodemon src/index.js
+[nodemon] 2.0.13
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/index.js`
+Waiting for mysql:3306.
+Connected!
+Connected to mysql db at host mysql
+Listening on port 3000
+ubuntu@ip-172-31-42-161:~/getting-started/app$ docker exec -it 5d1d82788e3a mysql -p todos
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fr%2Frun%2Fdocker.sock/v1.24/containers/5d1d82788e3a/json: dial unix /var/run/docker.sock: connect: permission denied
+ubuntu@ip-172-31-42-161:~/getting-started/app$ sudo docker exec -it 5d1d82788e3a mysql -p todos
+Enter password:
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 5
+Server version: 5.7.36 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> select * from todo_items;
+Empty set (0.00 sec)
+
+mysql>
