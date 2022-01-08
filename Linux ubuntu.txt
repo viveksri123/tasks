@@ -1,0 +1,1308 @@
+vivek333@C272LCOK:~$ pwd
+/home/vivek333
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  getting-started  temp
+vivek333@C272LCOK:~$ mkdir temp
+mkdir: cannot create directory ‘temp’: File exists
+vivek333@C272LCOK:~$ cd temp
+vivek333@C272LCOK:~/temp$ ls
+vivek333@C272LCOK:~/temp$ mkdir abdtutor
+vivek333@C272LCOK:~/temp$ ls
+abdtutor
+vivek333@C272LCOK:~/temp$ cd abdtutor/
+vivek333@C272LCOK:~/temp/abdtutor$ mkdir dir1 dir2
+vivek333@C272LCOK:~/temp/abdtutor$ ls
+dir1  dir2
+vivek333@C272LCOK:~/temp/abdtutor$ cd ..
+vivek333@C272LCOK:~/temp$ cd abdtutor/dir
+dir1/ dir2/
+vivek333@C272LCOK:~/temp$ cd abdtutor/dir
+dir1/ dir2/
+vivek333@C272LCOK:~/temp$ cd abdtutor/dir2
+vivek333@C272LCOK:~/temp/abdtutor/dir2$ cd /
+vivek333@C272LCOK:/$ pwd
+/
+vivek333@C272LCOK:/$ ls
+bin   etc   lib    libx32      mnt   root  snap  tmp
+boot  home  lib32  lost+found  opt   run   srv   usr
+dev   init  lib64  media       proc  sbin  sys   var
+vivek333@C272LCOK:/$ cd usr
+vivek333@C272LCOK:/usr$ ls
+bin    include  lib32  libexec  local  share
+games  lib      lib64  libx32   sbin   src
+vivek333@C272LCOK:/usr/bin$ ls
+ NF                                   pactl
+ VGAuthService                        padsp
+ X11                                  pager
+'['                                   pamon
+ aa-enabled                           paplay
+ aa-exec                              parec
+ add-apt-repository                   parecord
+vivek333@C272LCOK:/$ cd /
+vivek333@C272LCOK:/$ pwd
+/
+vivek333@C272LCOK:/$ ls
+bin   etc   lib    libx32      mnt   root  snap  tmp
+boot  home  lib32  lost+found  opt   run   srv   usr
+dev   init  lib64  media       proc  sbin  sys   var
+vivek333@C272LCOK:/$ cd ..
+vivek333@C272LCOK:/$ pwd
+/
+vivek333@C272LCOK:/$ cd
+vivek333@C272LCOK:~$ pwd
+/home/vivek333
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  getting-started  temp
+vivek333@C272LCOK:~$ cd temp/
+vivek333@C272LCOK:~/temp$ mkdir -p foldr1/infoldr
+vivek333@C272LCOK:~/temp$ ls
+abdtutor  foldr1
+vivek333@C272LCOK:~/temp$ cd foldr1/
+vivek333@C272LCOK:~/temp/foldr1$ ls
+infoldr
+vivek333@C272LCOK:~/temp/foldr1$ cd ../..
+vivek333@C272LCOK:~$ pwd
+/home/vivek333
+vivek333@C272LCOK:~$ ls > outputfile.txt
+vivek333@C272LCOK:~$ cat outputfile.txt
+Hashmum
+docker
+getting-started
+outputfile.txt
+temp
+vivek333@C272LCOK:~$ cd temp/
+vivek333@C272LCOK:~/temp$ cd foldr1/
+vivek333@C272LCOK:~/temp/foldr1$ echo "Hello! welcome to linux" > mytext.txt
+vivek333@C272LCOK:~/temp/foldr1$ cat mytext.txt
+Hello! welcome to linux
+vivek333@C272LCOK:~/temp/foldr1$ cat my*
+Hello! welcome to linux
+vivek333@C272LCOK:~/temp/foldr1$ echo "Hello! how are you" > mytext1.txt
+vivek333@C272LCOK:~/temp/foldr1$ cat my*
+Hello! welcome to linux
+Hello! how are you
+vivek333@C272LCOK:~/temp/foldr1$ cat mytext.txt mytext1.txt
+Hello! welcome to linux
+Hello! how are you
+vivek333@C272LCOK:~/temp/foldr1$ cat my* > mix.txt
+vivek333@C272LCOK:~/temp/foldr1$ cat mix.txt
+Hello! welcome to linux
+Hello! how are you
+vivek333@C272LCOK:~/temp/foldr1$ echo "Now, we are appending this line" >>mix.txt
+vivek333@C272LCOK:~/temp/foldr1$ cat m
+mix.txt      mytext.txt   mytext1.txt
+vivek333@C272LCOK:~/temp/foldr1$ cat mix.txt
+Hello! welcome to linux
+Hello! how are you
+Now, we are appending this line
+vivek333@C272LCOK:~/temp/foldr1$ less
+Missing filename ("less --help" for help)
+vivek333@C272LCOK:~/temp/foldr1$ less mix.txt
+vivek333@C272LCOK:~/temp/foldr1$ ls
+infoldr  mix.txt  mytext.txt  mytext1.txt
+vivek333@C272LCOK:~/temp/foldr1$ mv mytext.txt temp
+vivek333@C272LCOK:~/temp/foldr1$ ls
+infoldr  mix.txt  mytext1.txt  temp
+vivek333@C272LCOK:~/temp/foldr1$ cd ..
+vivek333@C272LCOK:~/temp/foldr1$ mv text2 infoldr
+vivek333@C272LCOK:~/temp/foldr1$ ls
+infoldr  mix.txt
+vivek333@C272LCOK:~/temp/foldr1$ cd infoldr/
+vivek333@C272LCOK:~/temp/foldr1/infoldr$ ls
+text2
+vivek333@C272LCOK:~/temp$ touch file1
+vivek333@C272LCOK:~/temp$ ls
+abdtutor  file1  foldr1
+vivek333@C272LCOK:~/temp$ cp file1 newfile
+vivek333@C272LCOK:~/temp$ ls
+abdtutor  file1  foldr1  newfile
+vivek333@C272LCOK:~/temp$
+vivek333@C272LCOK:~$ whoami
+vivek333
+vivek333@C272LCOK:~$ who
+vivek333@C272LCOK:~$ w
+ 17:52:10 up  4:55,  0 users,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+vivek333@C272LCOK:~$ id
+uid=1000(vivek333) gid=1000(vivek333) groups=1000(vivek333),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),117(netdev),999(docker)
+vivek333@C272LCOK:~$ passwd
+Changing password for vivek333.
+Current password:
+New password:
+Retype new password:
+passwd: password updated successfully
+vivek333@C272LCOK:~$ man
+What manual page do you want?
+For example, try 'man man'.
+vivek333@C272LCOK:~$ man sudo
+vivek333@C272LCOK:/$ sudo adduser nicole
+Adding user `nicole' ...
+Adding new group `nicole' (1007) ...
+Adding new user `nicole' (1007) with group `nicole' ...
+Creating home directory `/home/nicole' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for nicole
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+vivek333@C272LCOK:/$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+systemd-timesync:x:102:104:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:106::/nonexistent:/usr/sbin/nologin
+syslog:x:104:110::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:111:TPM software stack,,,:/var/lib/tpm:/bin/false
+uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
+landscape:x:110:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:111:1::/var/cache/pollinate:/bin/false
+vivek333:x:1000:1000:,,,:/home/vivek333:/bin/bash
+kevin:x:1001:1001:,,,:/home/kevin:/bin/bash
+keviv:x:1002:1002:v,,,:/home/keviv:/bin/bash
+cat:x:1003:1003:,,,:/home/cat:/bin/bash
+james:x:1004:1004:,,,:/home/james:/bin/bash
+peter:x:1005:1005:,,,:/home/peter:/bin/bash
+joe:x:1006:1006::/home/joe:/bin/sh
+nicole:x:1007:1007:,,,:/home/nicole:/bin/bash
+vivek333@C272LCOK:/$
+vivek333@C272LCOK:/$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,vivek333
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:vivek333
+fax:x:21:
+voice:x:22:
+cdrom:x:24:vivek333
+floppy:x:25:vivek333
+tape:x:26:
+sudo:x:27:vivek333
+audio:x:29:vivek333
+dip:x:30:vivek333
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:vivek333
+sasl:x:45:
+plugdev:x:46:vivek333
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+systemd-timesync:x:104:
+crontab:x:105:
+messagebus:x:106:
+input:x:107:
+kvm:x:108:
+render:x:109:
+syslog:x:110:
+tss:x:111:
+uuidd:x:112:
+tcpdump:x:113:
+ssh:x:114:
+landscape:x:115:
+admin:x:116:
+netdev:x:117:vivek333
+lxd:x:118:
+vivek333:x:1000:
+docker:x:999:vivek333
+kevin:x:1001:
+keviv:x:1002:
+cat:x:1003:
+james:x:1004:
+peter:x:1005:
+joe:x:1006:
+nicole:x:1007:
+vivek333@C272LCOK:/$ sudo groupadd training
+vivek333@C272LCOK:/$ sudo addgroup training
+addgroup: The group `training' already exists.
+vivek333@C272LCOK:/$ sudo addgroup training1
+Adding group `training1' (GID 1009) ...
+Done.
+vivek333@C272LCOK:/$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,vivek333
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:vivek333
+fax:x:21:
+voice:x:22:
+cdrom:x:24:vivek333
+floppy:x:25:vivek333
+tape:x:26:
+sudo:x:27:vivek333
+audio:x:29:vivek333
+dip:x:30:vivek333
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:vivek333
+sasl:x:45:
+plugdev:x:46:vivek333
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+systemd-timesync:x:104:
+crontab:x:105:
+messagebus:x:106:
+input:x:107:
+kvm:x:108:
+render:x:109:
+syslog:x:110:
+tss:x:111:
+uuidd:x:112:
+tcpdump:x:113:
+ssh:x:114:
+landscape:x:115:
+admin:x:116:
+netdev:x:117:vivek333
+lxd:x:118:
+vivek333:x:1000:
+docker:x:999:vivek333
+kevin:x:1001:
+keviv:x:1002:
+cat:x:1003:
+james:x:1004:
+peter:x:1005:
+joe:x:1006:
+nicole:x:1007:
+training:x:1008:
+training1:x:1009:
+vivek333@C272LCOK:/$
+vivek333@C272LCOK:/$ ls -il
+total 688
+             12 lrwxrwxrwx   1 root root      7 Apr 23  2020 bin -> usr/bin
+           8193 drwxr-xr-x   2 root root   4096 Apr 23  2020 boot
+              1 drwxr-xr-x   8 root root   2720 Jan  7 12:56 dev
+          16385 drwxr-xr-x  95 root root   4096 Jan  7 18:04 etc
+          16386 drwxr-xr-x   9 root root   4096 Jan  7 18:02 home
+281474977218513 -rwxr-xr-x   2 root root 636192 Dec 27 09:27 init
+           1559 lrwxrwxrwx   1 root root      7 Apr 23  2020 lib -> usr/lib
+           1560 lrwxrwxrwx   1 root root      9 Apr 23  2020 lib32 -> usr/lib32
+           1561 lrwxrwxrwx   1 root root      9 Apr 23  2020 lib64 -> usr/lib64
+           1562 lrwxrwxrwx   1 root root     10 Apr 23  2020 libx32 -> usr/libx32
+             11 drwx------   2 root root  16384 Apr 10  2019 lost+found
+          24577 drwxr-xr-x   2 root root   4096 Apr 23  2020 media
+          24578 drwxr-xr-x   4 root root   4096 Dec 30 19:59 mnt
+          32769 drwxr-xr-x   3 root root   4096 Dec 30 21:13 opt
+              1 dr-xr-xr-x 167 root root      0 Jan  7 12:56 proc
+          40961 drwx------   3 root root   4096 Jan  5 17:37 root
+              1 drwxr-xr-x   9 root root    180 Jan  7 12:57 run
+           1565 lrwxrwxrwx   1 root root      8 Apr 23  2020 sbin -> usr/sbin
+          49153 drwxr-xr-x   2 root root   4096 Apr 10  2020 snap
+          49154 drwxr-xr-x   2 root root   4096 Apr 23  2020 srv
+              1 dr-xr-xr-x  11 root root      0 Jan  7 12:56 sys
+          57346 drwxrwxrwt   3 root root   4096 Jan  7 12:58 tmp
+          65537 drwxr-xr-x  14 root root   4096 Apr 23  2020 usr
+          40963 drwxr-xr-x  13 root root   4096 Apr 23  2020 var
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  getting-started  outputfile.txt  temp
+vivek333@C272LCOK:~$ file output.txt
+output.txt: cannot open `output.txt' (No such file or directory)
+vivek333@C272LCOK:~$ file outputfile.txt
+outputfile.txt: ASCII text
+vivek333@C272LCOK:~$
+vivek333@C272LCOK:~$ ls -a
+.              .bashrc     .motd_shown                docker
+..             .docker     .profile                   getting-started
+.Xauthority    .gitconfig  .sudo_as_admin_successful  outputfile.txt
+.bash_history  .landscape  .wsl-config                temp
+.bash_logout   .local      Hashmum
+vivek333@C272LCOK:~$ ls -l
+total 20
+drwxr-xr-x 2 vivek333 vivek333 4096 Jan  5 17:52 Hashmum
+drwxr-xr-x 5 vivek333 vivek333 4096 Jan  4 23:38 docker
+drwxr-xr-x 6 vivek333 vivek333 4096 Dec 30 21:19 getting-started
+-rw-r--r-- 1 vivek333 vivek333   51 Jan  7 17:26 outputfile.txt
+drwxr-xr-x 4 vivek333 vivek333 4096 Jan  7 17:48 temp
+vivek333@C272LCOK:~$ chmod o-w outputfile.txt
+vivek333@C272LCOK:~$ ls -l outputfile.txt
+-rw-r--r-- 1 vivek333 vivek333 51 Jan  7 17:26 outputfile.txt
+vivek333@C272LCOK:~$
+vivek333@C272LCOK:~$ ls -alh
+total 72K
+drwxr-xr-x 9 vivek333 vivek333 4.0K Jan  7 17:26 .
+drwxr-xr-x 9 root     root     4.0K Jan  7 18:02 ..
+-rw------- 1 vivek333 vivek333   54 Dec 31 09:50 .Xauthority
+-rw------- 1 vivek333 vivek333 6.2K Jan  7 17:03 .bash_history
+-rw-r--r-- 1 vivek333 vivek333  220 Dec 30 19:59 .bash_logout
+-rw-r--r-- 1 vivek333 vivek333 3.7K Dec 30 19:59 .bashrc
+drwx------ 2 vivek333 vivek333 4.0K Jan  4 23:39 .docker
+-rw-r--r-- 1 vivek333 vivek333   26 Dec 30 21:29 .gitconfig
+drwxr-xr-x 2 vivek333 vivek333 4.0K Dec 30 19:59 .landscape
+drwxr-xr-x 3 vivek333 vivek333 4.0K Dec 30 21:20 .local
+-rw-r--r-- 1 vivek333 vivek333    0 Jan  7 12:56 .motd_shown
+-rw-r--r-- 1 vivek333 vivek333  807 Dec 30 19:59 .profile
+-rw-r--r-- 1 vivek333 vivek333    0 Dec 30 20:06 .sudo_as_admin_successful
+-rw-r--r-- 1 vivek333 vivek333 1.9K Dec 30 22:01 .wsl-config
+drwxr-xr-x 2 vivek333 vivek333 4.0K Jan  5 17:52 Hashmum
+drwxr-xr-x 5 vivek333 vivek333 4.0K Jan  4 23:38 docker
+drwxr-xr-x 6 vivek333 vivek333 4.0K Dec 30 21:19 getting-started
+-rw-r--r-- 1 vivek333 vivek333   51 Jan  7 17:26 outputfile.txt
+drwxr-xr-x 4 vivek333 vivek333 4.0K Jan  7 17:48 temp
+vivek333@C272LCOK:~$ touch emptyfile
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  emptyfile  getting-started  outputfile.txt  temp
+vivek333@C272LCOK:~$ ls -alh emptyfile
+-rw-r--r-- 1 vivek333 vivek333 0 Jan  7 18:15 emptyfile
+vivek333@C272LCOK:~$
+vivek333@C272LCOK:~$ touch emptyfile
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  emptyfile  getting-started  outputfile.txt  temp
+vivek333@C272LCOK:~$ ls -alh emptyfile
+-rw-r--r-- 1 vivek333 vivek333 0 Jan  7 18:15 emptyfile
+vivek333@C272LCOK:~$ nano emptyfile
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  emptyfile  getting-started  outputfile.txt  temp
+vivek333@C272LCOK:~$ touch new1
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  emptyfile  getting-started  new1  outputfile.txt  temp
+vivek333@C272LCOK:~$ rm new1
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  emptyfile  getting-started  outputfile.txt  temp
+vivek333@C272LCOK:~$ find . -name *.txt
+./outputfile.txt
+vivek333@C272LCOK:~$ find . -name *.*
+./outputfile.txt
+vivek333@C272LCOK:~$ find . -type d -name "t*"
+./docker/.git/refs/tags
+./getting-started/.git/refs/tags
+./getting-started/docs/tutorial
+./temp
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  emptyfile  getting-started  outputfile.txt  temp
+vivek333@C272LCOK:~$ find . -name emptyfile -delete
+vivek333@C272LCOK:~$ ls
+Hashmum  docker  getting-started  outputfile.txt  temp
+vivek333@C272LCOK:~$ free
+              total        used        free      shared  buff/cache   available
+Mem:       12597752       88320    12130188          72      379244    12263156
+Swap:       4194304           0     4194304
+vivek333@C272LCOK:~$ uptime
+ 19:09:54 up  6:13,  0 users,  load average: 0.00, 0.30, 0.47
+vivek333@C272LCOK:~$ sudo apt install nmap
+[sudo] password for vivek333:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libblas3 liblinear4 liblua5.3-0 lua-lpeg nmap-common
+Suggested packages:
+  liblinear-tools liblinear-dev ncat ndiff zenmap
+The following NEW packages will be installed:
+  libblas3 liblinear4 liblua5.3-0 lua-lpeg nmap nmap-common
+0 upgraded, 6 newly installed, 0 to remove and 246 not upgraded.
+Need to get 5669 kB of archives.
+After this operation, 26.8 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libblas3 amd64 3.9.0-1build1 [142 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 liblinear4 amd64 2.3.0+dfsg-3build1 [41.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 liblua5.3-0 amd64 5.3.3-1.1ubuntu2 [116 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/universe amd64 lua-lpeg amd64 1.0.2-1 [31.4 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal/universe amd64 nmap-common all 7.80+dfsg1-2build1 [3676 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 nmap amd64 7.80+dfsg1-2build1 [1662 kB]
+Fetched 5669 kB in 7s (833 kB/s)
+Selecting previously unselected package libblas3:amd64.
+(Reading database ... 32158 files and directories currently installed.)
+Preparing to unpack .../0-libblas3_3.9.0-1build1_amd64.deb ...
+Unpacking libblas3:amd64 (3.9.0-1build1) ...
+Selecting previously unselected package liblinear4:amd64.
+Preparing to unpack .../1-liblinear4_2.3.0+dfsg-3build1_amd64.deb ...
+Unpacking liblinear4:amd64 (2.3.0+dfsg-3build1) ...
+Selecting previously unselected package liblua5.3-0:amd64.
+Preparing to unpack .../2-liblua5.3-0_5.3.3-1.1ubuntu2_amd64.deb ...
+Unpacking liblua5.3-0:amd64 (5.3.3-1.1ubuntu2) ...
+Selecting previously unselected package lua-lpeg:amd64.
+Preparing to unpack .../3-lua-lpeg_1.0.2-1_amd64.deb ...
+Unpacking lua-lpeg:amd64 (1.0.2-1) ...
+Selecting previously unselected package nmap-common.
+Preparing to unpack .../4-nmap-common_7.80+dfsg1-2build1_all.deb ...
+Unpacking nmap-common (7.80+dfsg1-2build1) ...
+Selecting previously unselected package nmap.
+Preparing to unpack .../5-nmap_7.80+dfsg1-2build1_amd64.deb ...
+Unpacking nmap (7.80+dfsg1-2build1) ...
+Setting up lua-lpeg:amd64 (1.0.2-1) ...
+Setting up libblas3:amd64 (3.9.0-1build1) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/blas/libblas.so.3 to provide /usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+Setting up nmap-common (7.80+dfsg1-2build1) ...
+Setting up liblua5.3-0:amd64 (5.3.3-1.1ubuntu2) ...
+Setting up liblinear4:amd64 (2.3.0+dfsg-3build1) ...
+Setting up nmap (7.80+dfsg1-2build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+vivek333@C272LCOK:~$ sudo apt remove nmap
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libblas3 liblinear4 liblua5.3-0 lua-lpeg nmap-common
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  nmap
+0 upgraded, 0 newly installed, 1 to remove and 246 not upgraded.
+After this operation, 4499 kB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 33046 files and directories currently installed.)
+Removing nmap (7.80+dfsg1-2build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+vivek333@C272LCOK:~$
+vivek333@C272LCOK:~$ sudo adduser ram
+Adding user `ram' ...
+Adding new group `ram' (1010) ...
+Adding new user `ram' (1008) with group `ram' ...
+Creating home directory `/home/ram' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for ram
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n]
+vivek333@C272LCOK:~$ sudo adduser ram
+adduser: The user `ram' already exists.
+vivek333@C272LCOK:~$ su ram
+Password:
+ram@C272LCOK:/home/vivek333$ cd ..
+vivek333@C272LCOK:/$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Hit:4 https://download.docker.com/linux/ubuntu focal InRelease
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1445 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [289 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [663 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [94.6 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [892 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1109 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [202 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [609 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [86.8 kB]
+Fetched 5725 kB in 10s (554 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+246 packages can be upgraded. Run 'apt list --upgradable' to see them.
+vivek333@C272LCOK:/$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  libblas3 liblinear4 liblua5.3-0 lua-lpeg nmap-common
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  distro-info libatasmart4 libblockdev-crypto2 libblockdev-fs2
+  libblockdev-loop2 libblockdev-part-err2 libblockdev-part2
+  libblockdev-swap2 libblockdev-utils2 libblockdev2 libjcat1 libllvm12
+  libnspr4 libnss3 libparted-fs-resize0 libudisks2-0 libvolume-key1
+  libxcb-shm0 libxcb-xfixes0 motd-news-config python3-pexpect
+  python3-ptyprocess udisks2
+The following packages will be upgraded:
+  accountsservice alsa-ucm-conf apparmor apport apt apt-utils base-files
+  bash bcache-tools bind9-dnsutils bind9-host bind9-libs bolt bsdutils
+  busybox-initramfs busybox-static cloud-init cloud-initramfs-copymods
+  cloud-initramfs-dyn-netconf command-not-found cpio cryptsetup
+  cryptsetup-bin cryptsetup-initramfs cryptsetup-run dbus
+  dbus-user-session dbus-x11 dirmngr distro-info-data fdisk finalrd
+  friendly-recovery fwupd fwupd-signed gcc-10-base gir1.2-glib-2.0
+  gir1.2-packagekitglib-1.0 git git-man glib-networking
+  glib-networking-common glib-networking-services gnupg gnupg-l10n
+  gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
+  gpgv initramfs-tools initramfs-tools-bin initramfs-tools-core
+  isc-dhcp-client isc-dhcp-common krb5-locales landscape-common
+  language-selector-common less libaccountsservice0 libapparmor1
+  libapt-pkg6.0 libasound2 libasound2-data libblkid1 libbrotli1 libc-bin
+  libc6 libcryptsetup12 libcurl3-gnutls libdbus-1-3 libdns-export1109
+  libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2
+  libdrm-radeon1 libdrm2 libefiboot1 libefivar1 libfdisk1 libfreetype6
+  libfwupd2 libfwupdplugin1 libgcc-s1 libgcrypt20 libgirepository-1.0-1
+  libgl1 libgl1-mesa-dri libglapi-mesa libglib2.0-0 libglib2.0-bin
+  libglib2.0-data libglvnd0 libglx-mesa0 libglx0 libgnutls30
+  libgssapi-krb5-2 libhogweed5 libicu66 libisc-export1105 libjson-c4
+  libk5crypto3 libkrb5-3 libkrb5support0 libldap-2.4-2 libldap-common
+  liblz4-1 liblzma5 libmaxminddb0 libmount1 libnetplan0 libnettle7
+  libnss-systemd libntfs-3g883 libp11-kit0 libpackagekit-glib2-18
+  libpam-modules libpam-modules-bin libpam-runtime libpam-systemd
+  libpam0g libparted2 libpci3 libperl5.30 libplymouth5
+  libpolkit-agent-1-0 libpolkit-gobject-1-0 libprocps8 libproxy1v5
+  libpulse0 libpulsedsp libpython3.8 libpython3.8-minimal
+  libpython3.8-stdlib libseccomp2 libsmartcols1 libsndfile1 libsqlite3-0
+  libssh-4 libssl1.1 libstdc++6 libsystemd0 libtdb1 libudev1 libuuid1
+  libuv1 libx11-6 libx11-data libx11-xcb1 libxml2 libxmlb1 libzstd1
+  linux-base locales login lshw lsof lz4 mdadm mesa-vulkan-drivers mount
+  netplan.io networkd-dispatcher ntfs-3g open-iscsi open-vm-tools
+  openssh-client openssh-server openssh-sftp-server openssl overlayroot
+  packagekit packagekit-tools parted passwd pciutils perl perl-base
+  perl-modules-5.30 plymouth plymouth-theme-ubuntu-text policykit-1
+  pollinate procps pulseaudio-utils python-apt-common python3-apport
+  python3-apt python3-commandnotfound python3-cryptography
+  python3-distupgrade python3-distutils python3-gdbm python3-lib2to3
+  python3-problem-report python3-requests python3-twisted
+  python3-twisted-bin python3-update-manager python3-urllib3 python3-yaml
+  python3.8 python3.8-minimal rsync rsyslog screen show-motd snapd
+  sosreport squashfs-tools strace sudo systemd systemd-sysv
+  systemd-timesyncd tar tmux tzdata ubuntu-advantage-tools ubuntu-keyring
+  ubuntu-minimal ubuntu-release-upgrader-core ubuntu-server
+  ubuntu-standard ubuntu-wsl udev ufw unattended-upgrades
+  update-manager-core update-motd update-notifier-common util-linux
+  uuid-runtime vim vim-common vim-runtime vim-tiny wget wslu xxd xz-utils
+  zlib1g
+246 upgraded, 23 newly installed, 0 to remove and 0 not upgraded.
+Need to get 159 MB of archives.
+After this operation, 209 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-server amd64 1.450.2 [2680 B]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 show-motd all 3.6-0ubuntu6.1 [2304 B]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 base-files amd64 11ubuntu5.4 [60.6 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 motd-news-config all 11ubuntu5.4 [4544 B]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-10-base amd64 10.3.0-1ubuntu1~20.04 [20.2 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-s1 amd64 10.3.0-1ubuntu1~20.04 [41.8 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++6 amd64 10.3.0-1ubuntu1~20.04 [501 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6 amd64 2.31-0ubuntu9.2 [2715 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcrypt20 amd64 1.8.5-5ubuntu1.1 [420 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gpg-wks-client amd64 2.2.19-3ubuntu2.1 [97.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dirmngr amd64 2.2.19-3ubuntu2.1 [329 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gnupg-utils amd64 2.2.19-3ubuntu2.1 [480 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gpg-wks-server amd64 2.2.19-3ubuntu2.1 [90.3 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gpg-agent amd64 2.2.19-3ubuntu2.1 [232 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gpg amd64 2.2.19-3ubuntu2.1 [483 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gpgconf amd64 2.2.19-3ubuntu2.1 [124 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gnupg-l10n all 2.2.19-3ubuntu2.1 [51.7 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gnupg all 2.2.19-3ubuntu2.1 [259 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gpgsm amd64 2.2.19-3ubuntu2.1 [217 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsqlite3-0 amd64 3.31.1-4ubuntu0.2 [549 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g amd64 1:1.2.11.dfsg-2ubuntu1.2 [53.6 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnettle7 amd64 3.5.1+really3.5.1-2ubuntu0.2 [115 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libhogweed5 amd64 3.5.1+really3.5.1-2ubuntu0.2 [138 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libp11-kit0 amd64 0.23.20-1ubuntu0.1 [188 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgnutls30 amd64 3.6.13-2ubuntu1.6 [828 kB]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libldap-common all 2.4.49+dfsg-2ubuntu1.8 [16.6 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libldap-2.4-2 amd64 2.4.49+dfsg-2ubuntu1.8 [155 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gpgv amd64 2.2.19-3ubuntu2.1 [199 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 lz4 amd64 1.9.2-2ubuntu0.20.04.1 [82.7 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 liblz4-1 amd64 1.9.2-2ubuntu0.20.04.1 [56.1 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 liblzma5 amd64 5.2.4-1ubuntu1 [91.7 kB]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 udev amd64 245.4-4ubuntu3.14 [1365 kB]
+Get:33 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libudev1 amd64 245.4-4ubuntu3.14 [77.7 kB]
+Get:34 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libblkid1 amd64 2.34-0.1ubuntu9.1 [137 kB]
+Get:35 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 systemd-sysv amd64 245.4-4ubuntu3.14 [10.3 kB]
+Get:36 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 login amd64 1:4.8.1-1ubuntu5.20.04.1 [220 kB]
+Get:37 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libuuid1 amd64 2.34-0.1ubuntu9.1 [20.0 kB]
+Get:38 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfdisk1 amd64 2.34-0.1ubuntu9.1 [175 kB]
+Get:39 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libmount1 amd64 2.34-0.1ubuntu9.1 [149 kB]
+Get:40 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsmartcols1 amd64 2.34-0.1ubuntu9.1 [100 kB]
+Get:41 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 fdisk amd64 2.34-0.1ubuntu9.1 [119 kB]
+Get:42 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 util-linux amd64 2.34-0.1ubuntu9.1 [1021 kB]
+Get:43 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 systemd-timesyncd amd64 245.4-4ubuntu3.14 [28.1 kB]
+Get:44 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnss-systemd amd64 245.4-4ubuntu3.14 [95.8 kB]
+Get:45 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpam0g amd64 1.3.1-5ubuntu4.3 [55.4 kB]
+Get:46 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpam-modules-bin amd64 1.3.1-5ubuntu4.3 [41.2 kB]
+Get:47 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpam-modules amd64 1.3.1-5ubuntu4.3 [260 kB]
+Get:48 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 update-motd all 3.6-0ubuntu6.1 [5272 B]
+Get:49 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpam-runtime all 1.3.1-5ubuntu4.3 [37.3 kB]
+Get:50 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dbus-user-session amd64 1.12.16-2ubuntu2.1 [9428 B]
+Get:51 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-data all 2:1.6.9-2ubuntu1.2 [113 kB]
+Get:52 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-6 amd64 2:1.6.9-2ubuntu1.2 [575 kB]
+Get:53 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dbus-x11 amd64 1.12.16-2ubuntu2.1 [22.6 kB]
+Get:54 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dbus amd64 1.12.16-2ubuntu2.1 [151 kB]
+Get:55 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdbus-1-3 amd64 1.12.16-2ubuntu2.1 [179 kB]
+Get:56 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libapparmor1 amd64 2.13.3-7ubuntu5.1 [34.1 kB]
+Get:57 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpam-systemd amd64 245.4-4ubuntu3.14 [186 kB]
+Get:58 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjson-c4 amd64 0.13.1+dfsg-7ubuntu0.3 [29.3 kB]
+Get:59 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.10 [1322 kB]
+Get:60 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcryptsetup12 amd64 2:2.2.2-3ubuntu2.3 [183 kB]
+Get:61 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libseccomp2 amd64 2.5.1-1ubuntu1~20.04.2 [42.5 kB]
+Get:62 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 mount amd64 2.34-0.1ubuntu9.1 [115 kB]
+Get:63 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 systemd amd64 245.4-4ubuntu3.14 [3807 kB]
+Get:64 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsystemd0 amd64 245.4-4ubuntu3.14 [270 kB]
+Get:65 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libzstd1 amd64 1.4.4+dfsg-3ubuntu0.1 [237 kB]
+Get:66 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libapt-pkg6.0 amd64 2.0.6 [835 kB]
+Get:67 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python-apt-common all 2.0.0ubuntu0.20.04.6 [17.1 kB]
+Get:68 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-apt amd64 2.0.0ubuntu0.20.04.6 [154 kB]
+Get:69 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-problem-report all 2.20.11-0ubuntu27.21 [9896 B]
+Get:70 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-apport all 2.20.11-0ubuntu27.21 [85.9 kB]
+Get:71 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglib2.0-data all 2.64.6-1~ubuntu20.04.4 [6052 B]
+Get:72 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglib2.0-bin amd64 2.64.6-1~ubuntu20.04.4 [72.6 kB]
+Get:73 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglib2.0-0 amd64 2.64.6-1~ubuntu20.04.4 [1287 kB]
+Get:74 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgirepository-1.0-1 amd64 1.64.1-1~ubuntu20.04.1 [85.7 kB]
+Get:75 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gir1.2-glib-2.0 amd64 1.64.1-1~ubuntu20.04.1 [134 kB]
+Get:76 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apport all 2.20.11-0ubuntu27.21 [129 kB]
+Get:77 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bcache-tools amd64 1.0.8-3ubuntu0.1 [19.5 kB]
+Get:78 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 friendly-recovery all 0.2.41ubuntu0.20.04.1 [8980 B]
+Get:79 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 initramfs-tools all 0.136ubuntu6.6 [9248 B]
+Get:80 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 initramfs-tools-core all 0.136ubuntu6.6 [47.7 kB]
+Get:81 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 initramfs-tools-bin amd64 0.136ubuntu6.6 [10.9 kB]
+Get:82 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 busybox-initramfs amd64 1:1.30.1-4ubuntu6.4 [169 kB]
+Get:83 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cpio amd64 2.13+dfsg-2ubuntu0.3 [86.4 kB]
+Get:84 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-base all 4.5ubuntu3.7 [17.6 kB]
+Get:85 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cloud-initramfs-copymods all 0.45ubuntu2 [4180 B]
+Get:86 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cloud-initramfs-dyn-netconf all 0.45ubuntu2 [6700 B]
+Get:87 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 git-man all 1:2.25.1-1ubuntu3.2 [884 kB]
+Get:88 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libbrotli1 amd64 1.0.7-6ubuntu0.1 [267 kB]
+Get:89 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libk5crypto3 amd64 1.17-6ubuntu4.1 [79.9 kB]
+Get:90 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgssapi-krb5-2 amd64 1.17-6ubuntu4.1 [121 kB]
+Get:91 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkrb5-3 amd64 1.17-6ubuntu4.1 [330 kB]
+Get:92 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkrb5support0 amd64 1.17-6ubuntu4.1 [30.9 kB]
+Get:93 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssh-4 amd64 0.9.3-2ubuntu2.2 [170 kB]
+Get:94 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl3-gnutls amd64 7.68.0-1ubuntu2.7 [232 kB]
+Get:95 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 perl-modules-5.30 all 5.30.0-9ubuntu0.2 [2738 kB]
+Get:96 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libperl5.30 amd64 5.30.0-9ubuntu0.2 [3952 kB]
+Get:97 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 perl amd64 5.30.0-9ubuntu0.2 [224 kB]
+Get:98 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 perl-base amd64 5.30.0-9ubuntu0.2 [1513 kB]
+Get:99 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.2 [4554 kB]
+Get:100 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 mdadm amd64 4.1-5ubuntu1.2 [417 kB]
+Get:101 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cryptsetup-initramfs all 2:2.2.2-3ubuntu2.3 [25.5 kB]
+Get:102 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cryptsetup-bin amd64 2:2.2.2-3ubuntu2.3 [119 kB]
+Get:103 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cryptsetup amd64 2:2.2.2-3ubuntu2.3 [159 kB]
+Get:104 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 overlayroot all 0.45ubuntu2 [15.6 kB]
+Get:105 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 xxd amd64 2:8.1.2269-1ubuntu5.4 [50.7 kB]
+Get:106 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim amd64 2:8.1.2269-1ubuntu5.4 [1239 kB]
+Get:107 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-tiny amd64 2:8.1.2269-1ubuntu5.4 [579 kB]
+Get:108 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-runtime all 2:8.1.2269-1ubuntu5.4 [5875 kB]
+Get:109 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.10-0ubuntu1~20.04.2 [387 kB]
+Get:110 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-minimal amd64 3.8.10-0ubuntu1~20.04.2 [1900 kB]
+Get:111 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-distutils all 3.8.10-0ubuntu1~20.04 [141 kB]
+Get:112 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8 amd64 3.8.10-0ubuntu1~20.04.2 [1625 kB]
+Get:113 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.2 [1675 kB]
+Get:114 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.2 [717 kB]
+Get:115 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-lib2to3 all 3.8.10-0ubuntu1~20.04 [76.3 kB]
+Get:116 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-common all 2:8.1.2269-1ubuntu5.4 [85.7 kB]
+Get:117 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 pollinate all 4.33-3ubuntu1.20.04.1 [22.6 kB]
+Get:118 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 screen amd64 4.8.0-1ubuntu0.1 [577 kB]
+Get:119 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-ptyprocess all 0.6.0-1ubuntu1 [13.3 kB]
+Get:120 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-pexpect all 4.6.0-1build1 [44.6 kB]
+Get:121 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 sosreport amd64 4.1-1ubuntu0.20.04.3 [245 kB]
+Get:122 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 tmux amd64 3.0a-2ubuntu0.3 [292 kB]
+Get:123 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-release-upgrader-core all 1:20.04.36 [23.8 kB]
+Get:124 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 update-manager-core all 1:20.04.10.9 [11.5 kB]
+Get:125 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-update-manager all 1:20.04.10.9 [38.1 kB]
+Get:126 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-distupgrade all 1:20.04.36 [104 kB]
+Get:127 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 distro-info-data all 0.43ubuntu1.9 [4744 B]
+Get:128 http://archive.ubuntu.com/ubuntu focal/main amd64 distro-info amd64 0.23ubuntu1 [17.1 kB]
+Get:129 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-yaml amd64 5.3.1-1ubuntu0.1 [136 kB]
+Get:130 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-advantage-tools amd64 27.4.2~20.04.1 [859 kB]
+Get:131 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 update-notifier-common all 3.192.30.10 [133 kB]
+Get:132 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bash amd64 5.0-6ubuntu1.1 [638 kB]
+Get:133 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bsdutils amd64 1:2.34-0.1ubuntu9.1 [63.1 kB]
+Get:134 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 tar amd64 1.30+dfsg-7ubuntu0.20.04.1 [240 kB]
+Get:135 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 locales all 2.31-0ubuntu9.2 [3872 kB]
+Get:136 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-bin amd64 2.31-0ubuntu9.2 [639 kB]
+Get:137 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apt amd64 2.0.6 [1296 kB]
+Get:138 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apt-utils amd64 2.0.6 [216 kB]
+Get:139 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-keyring all 2020.02.11.4 [22.1 kB]
+Get:140 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 rsyslog amd64 8.2001.0-1ubuntu1.1 [427 kB]
+Get:141 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 accountsservice amd64 0.6.55-0ubuntu12~20.04.5 [61.0 kB]
+Get:142 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libaccountsservice0 amd64 0.6.55-0ubuntu12~20.04.5 [72.6 kB]
+Get:143 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 policykit-1 amd64 0.105-26ubuntu1.1 [84.1 kB]
+Get:144 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpolkit-agent-1-0 amd64 0.105-26ubuntu1.1 [15.2 kB]
+Get:145 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpolkit-gobject-1-0 amd64 0.105-26ubuntu1.1 [39.5 kB]
+Get:146 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 language-selector-common all 0.204.2 [224 kB]
+Get:147 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ntfs-3g amd64 1:2017.3.23AR.3-3ubuntu1.1 [388 kB]
+Get:148 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libntfs-3g883 amd64 1:2017.3.23AR.3-3ubuntu1.1 [149 kB]
+Get:149 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 rsync amd64 3.1.3-8ubuntu0.1 [318 kB]
+Get:150 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 uuid-runtime amd64 2.34-0.1ubuntu9.1 [35.1 kB]
+Get:151 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 open-iscsi amd64 2.0.874-7.1ubuntu6.2 [283 kB]
+Get:152 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libprocps8 amd64 2:3.3.16-1ubuntu2.3 [33.0 kB]
+Get:153 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 procps amd64 2:3.3.16-1ubuntu2.3 [233 kB]
+Get:154 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdrm-common all 2.4.105-3~20.04.2 [5552 B]
+Get:155 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdrm2 amd64 2.4.105-3~20.04.2 [32.3 kB]
+Get:156 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 tzdata all 2021e-0ubuntu0.20.04 [295 kB]
+Get:157 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libicu66 amd64 66.1-2ubuntu2.1 [8515 kB]
+Get:158 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxml2 amd64 2.9.10+dfsg-5ubuntu0.20.04.1 [640 kB]
+Get:159 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 pciutils amd64 1:3.6.4-1ubuntu0.20.04.1 [56.5 kB]
+Get:160 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpci3 amd64 1:3.6.4-1ubuntu0.20.04.1 [26.9 kB]
+Get:161 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 open-vm-tools amd64 2:11.3.0-2ubuntu0~ubuntu20.04.2 [647 kB]
+Get:162 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 passwd amd64 1:4.8.1-1ubuntu5.20.04.1 [799 kB]
+Get:163 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libisc-export1105 amd64 1:9.11.16+dfsg-3~ubuntu1 [175 kB]
+Get:164 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdns-export1109 amd64 1:9.11.16+dfsg-3~ubuntu1 [765 kB]
+Get:165 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 isc-dhcp-client amd64 4.4.1-2.1ubuntu5.20.04.2 [246 kB]
+Get:166 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 isc-dhcp-common amd64 4.4.1-2.1ubuntu5.20.04.2 [44.9 kB]
+Get:167 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 less amd64 551-1ubuntu0.1 [123 kB]
+Get:168 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnetplan0 amd64 0.103-0ubuntu5~20.04.5 [53.4 kB]
+Get:169 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 netplan.io amd64 0.103-0ubuntu5~20.04.5 [125 kB]
+Get:170 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 networkd-dispatcher all 2.1-2~ubuntu20.04.1 [14.6 kB]
+Get:171 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssl amd64 1.1.1f-1ubuntu2.10 [620 kB]
+Get:172 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 sudo amd64 1.8.31-1ubuntu1.2 [514 kB]
+Get:173 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-minimal amd64 1.450.2 [2752 B]
+Get:174 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 xz-utils amd64 5.2.4-1ubuntu1 [82.5 kB]
+Get:175 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apparmor amd64 2.13.3-7ubuntu5.1 [494 kB]
+Get:176 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libmaxminddb0 amd64 1.4.2-0ubuntu1.20.04.1 [26.2 kB]
+Get:177 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libuv1 amd64 1.34.2-1ubuntu1.3 [80.8 kB]
+Get:178 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bind9-dnsutils amd64 1:9.16.1-0ubuntu2.9 [134 kB]
+Get:179 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bind9-libs amd64 1:9.16.1-0ubuntu2.9 [1107 kB]
+Get:180 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bind9-host amd64 1:9.16.1-0ubuntu2.9 [43.0 kB]
+Get:181 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 busybox-static amd64 1:1.30.1-4ubuntu6.4 [949 kB]
+Get:182 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-gdbm amd64 3.8.10-0ubuntu1~20.04 [15.2 kB]
+Get:183 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 command-not-found all 20.04.5 [5244 B]
+Get:184 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-commandnotfound all 20.04.5 [10.2 kB]
+Get:185 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 krb5-locales all 1.17-6ubuntu4.1 [11.4 kB]
+Get:186 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 parted amd64 3.3-4ubuntu0.20.04.1 [43.3 kB]
+Get:187 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libparted2 amd64 3.3-4ubuntu0.20.04.1 [159 kB]
+Get:188 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libplymouth5 amd64 0.9.4git20200323-0ubuntu6.2 [98.6 kB]
+Get:189 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 lshw amd64 02.18.85-0.3ubuntu2.20.04.1 [271 kB]
+Get:190 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 lsof amd64 4.93.2+dfsg-1ubuntu0.20.04.1 [252 kB]
+Get:191 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.4 [51.5 kB]
+Get:192 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.4 [377 kB]
+Get:193 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-client amd64 1:8.2p1-4ubuntu0.4 [671 kB]
+Get:194 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 plymouth-theme-ubuntu-text amd64 0.9.4git20200323-0ubuntu6.2 [9504 B]
+Get:195 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 plymouth amd64 0.9.4git20200323-0ubuntu6.2 [118 kB]
+Get:196 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 strace amd64 5.5-3ubuntu1 [380 kB]
+Get:197 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 wget amd64 1.20.3-1ubuntu2 [348 kB]
+Get:198 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-standard amd64 1.450.2 [2800 B]
+Get:199 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ufw all 0.36-6ubuntu1 [147 kB]
+Get:200 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 alsa-ucm-conf all 1.2.2-1ubuntu0.11 [26.9 kB]
+Get:201 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bolt amd64 0.8-4ubuntu1 [132 kB]
+Get:202 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cryptsetup-run all 2:2.2.2-3ubuntu2.3 [6072 B]
+Get:203 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 finalrd all 6~ubuntu20.04.1 [6852 B]
+Get:204 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 fwupd-signed amd64 1.27.1ubuntu5+1.5.11-0ubuntu1~20.04.2 [26.1 kB]
+Get:205 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libefivar1 amd64 37-2ubuntu2.2 [47.7 kB]
+Get:206 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libefiboot1 amd64 37-2ubuntu2.2 [40.5 kB]
+Get:207 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjcat1 amd64 0.1.3-2~ubuntu20.04.1 [25.9 kB]
+Get:208 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfwupd2 amd64 1.5.11-0ubuntu1~20.04.2 [82.0 kB]
+Get:209 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxmlb1 amd64 0.1.15-2ubuntu1~20.04.1 [50.5 kB]
+Get:210 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfwupdplugin1 amd64 1.5.11-0ubuntu1~20.04.2 [126 kB]
+Get:211 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 fwupd amd64 1.5.11-0ubuntu1~20.04.2 [1816 kB]
+Get:212 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpackagekit-glib2-18 amd64 1.1.13-2ubuntu1.1 [104 kB]
+Get:213 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gir1.2-packagekitglib-1.0 amd64 1.1.13-2ubuntu1.1 [21.6 kB]
+Get:214 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libproxy1v5 amd64 0.4.15-10ubuntu1.2 [49.1 kB]
+Get:215 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 glib-networking-common all 2.64.2-1ubuntu0.1 [5040 B]
+Get:216 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 glib-networking amd64 2.64.2-1ubuntu0.1 [58.2 kB]
+Get:217 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 glib-networking-services amd64 2.64.2-1ubuntu0.1 [10.6 kB]
+Get:218 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-twisted-bin amd64 18.9.0-11ubuntu0.20.04.1 [11.1 kB]
+Get:219 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-twisted all 18.9.0-11ubuntu0.20.04.1 [1931 kB]
+Get:220 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 landscape-common amd64 19.12-0ubuntu4.2 [86.4 kB]
+Get:221 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2 amd64 1.2.2-2.1ubuntu2.5 [335 kB]
+Get:222 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2-data all 1.2.2-2.1ubuntu2.5 [20.1 kB]
+Get:223 http://archive.ubuntu.com/ubuntu focal/main amd64 libatasmart4 amd64 0.19-5 [23.4 kB]
+Get:224 http://archive.ubuntu.com/ubuntu focal/main amd64 libblockdev-utils2 amd64 2.23-2ubuntu3 [14.0 kB]
+Get:225 http://archive.ubuntu.com/ubuntu focal/main amd64 libnspr4 amd64 2:4.25-1 [107 kB]
+Get:226 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnss3 amd64 2:3.49.1-1ubuntu1.6 [1256 kB]
+Get:227 http://archive.ubuntu.com/ubuntu focal/main amd64 libvolume-key1 amd64 0.3.12-3.1 [40.2 kB]
+Get:228 http://archive.ubuntu.com/ubuntu focal/main amd64 libblockdev-crypto2 amd64 2.23-2ubuntu3 [16.4 kB]
+Get:229 http://archive.ubuntu.com/ubuntu focal/main amd64 libblockdev-part-err2 amd64 2.23-2ubuntu3 [5440 B]
+Get:230 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libparted-fs-resize0 amd64 3.3-4ubuntu0.20.04.1 [47.4 kB]
+Get:231 http://archive.ubuntu.com/ubuntu focal/main amd64 libblockdev-fs2 amd64 2.23-2ubuntu3 [20.1 kB]
+Get:232 http://archive.ubuntu.com/ubuntu focal/main amd64 libblockdev-loop2 amd64 2.23-2ubuntu3 [6612 B]
+Get:233 http://archive.ubuntu.com/ubuntu focal/main amd64 libblockdev-part2 amd64 2.23-2ubuntu3 [15.3 kB]
+Get:234 http://archive.ubuntu.com/ubuntu focal/main amd64 libblockdev-swap2 amd64 2.23-2ubuntu3 [7764 B]
+Get:235 http://archive.ubuntu.com/ubuntu focal/main amd64 libblockdev2 amd64 2.23-2ubuntu3 [34.9 kB]
+Get:236 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdrm-amdgpu1 amd64 2.4.105-3~20.04.2 [18.4 kB]
+Get:237 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdrm-intel1 amd64 2.4.105-3~20.04.2 [60.7 kB]
+Get:238 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdrm-nouveau2 amd64 2.4.105-3~20.04.2 [16.4 kB]
+Get:239 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdrm-radeon1 amd64 2.4.105-3~20.04.2 [19.7 kB]
+Get:240 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfreetype6 amd64 2.10.1-2ubuntu0.1 [341 kB]
+Get:241 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-xcb1 amd64 2:1.6.9-2ubuntu1.2 [9372 B]
+Get:242 http://archive.ubuntu.com/ubuntu focal/main amd64 libxcb-shm0 amd64 1.14-2 [5584 B]
+Get:243 http://archive.ubuntu.com/ubuntu focal/main amd64 libxcb-xfixes0 amd64 1.14-2 [9296 B]
+Get:244 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglx-mesa0 amd64 21.0.3-0ubuntu0.3~20.04.5 [138 kB]
+Get:245 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgl1-mesa-dri amd64 21.0.3-0ubuntu0.3~20.04.5 [10.5 MB]
+Get:246 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglapi-mesa amd64 21.0.3-0ubuntu0.3~20.04.5 [26.8 kB]
+Get:247 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libllvm12 amd64 1:12.0.0-3ubuntu1~20.04.4 [18.8 MB]
+Get:248 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsndfile1 amd64 1.0.28-7ubuntu0.1 [170 kB]
+Get:249 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpulsedsp amd64 1:13.99.1-1ubuntu3.13 [21.7 kB]
+Get:250 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 pulseaudio-utils amd64 1:13.99.1-1ubuntu3.13 [55.0 kB]
+Get:251 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpulse0 amd64 1:13.99.1-1ubuntu3.13 [262 kB]
+Get:252 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtdb1 amd64 1.4.3-0ubuntu0.20.04.1 [44.2 kB]
+Get:253 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libudisks2-0 amd64 2.8.4-1ubuntu2 [99.4 kB]
+Get:254 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 mesa-vulkan-drivers amd64 21.0.3-0ubuntu0.3~20.04.5 [4731 kB]
+Get:255 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 packagekit-tools amd64 1.1.13-2ubuntu1.1 [32.8 kB]
+Get:256 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 packagekit amd64 1.1.13-2ubuntu1.1 [408 kB]
+Get:257 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-cryptography amd64 2.8-3ubuntu0.1 [211 kB]
+Get:258 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-urllib3 all 1.25.8-2ubuntu0.1 [88.3 kB]
+Get:259 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-requests all 2.22.0-2ubuntu1 [47.1 kB]
+Get:260 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 squashfs-tools amd64 1:4.4-1ubuntu0.3 [117 kB]
+Get:261 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 snapd amd64 2.51.1+20.04ubuntu2 [30.4 MB]
+Get:262 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 wslu all 2.3.6-0ubuntu2~20.04.0 [47.2 kB]
+Get:263 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-wsl amd64 1.450.2 [2476 B]
+Get:264 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 udisks2 amd64 2.8.4-1ubuntu2 [245 kB]
+Get:265 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 unattended-upgrades all 2.3ubuntu0.1 [48.7 kB]
+Get:266 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cloud-init all 21.4-0ubuntu1~20.04.1 [476 kB]
+Get:267 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgl1 amd64 1.3.2-1~ubuntu0.20.04.1 [86.9 kB]
+Get:268 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglx0 amd64 1.3.2-1~ubuntu0.20.04.1 [32.6 kB]
+Get:269 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libglvnd0 amd64 1.3.2-1~ubuntu0.20.04.1 [51.4 kB]
+Fetched 159 MB in 1min 44s (1535 kB/s)
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+(Reading database ... 33017 files and directories currently installed.)
+Preparing to unpack .../ubuntu-server_1.450.2_amd64.deb ...
+Unpacking ubuntu-server (1.450.2) over (1.450) ...
+Preparing to unpack .../show-motd_3.6-0ubuntu6.1_all.deb ...
+Unpacking show-motd (3.6-0ubuntu6.1) over (3.6-0ubuntu6) ...
+Preparing to unpack .../base-files_11ubuntu5.4_amd64.deb ...
+Unpacking base-files (11ubuntu5.4) over (11ubuntu5) ...
+Setting up base-files (11ubuntu5.4) ...
+Installing new version of config file /etc/issue ...
+Installing new version of config file /etc/issue.net ...
+Installing new version of config file /etc/lsb-release ...
+Installing new version of config file /etc/update-motd.d/50-motd-news ...
+Removing obsolete conffile /etc/default/motd-news ...
+Selecting previously unselected package motd-news-config.
+(Reading database ... 33016 files and directories currently installed.)
+Preparing to unpack .../motd-news-config_11ubuntu5.4_all.deb ...
+Unpacking motd-news-config (11ubuntu5.4) ...
+Preparing to unpack .../gcc-10-base_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking gcc-10-base:amd64 (10.3.0-1ubuntu1~20.04) over (10-20200411-0ubuntu1) ...
+Setting up gcc-10-base:amd64 (10.3.0-1ubuntu1~20.04) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../libgcc-s1_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libgcc-s1:amd64 (10.3.0-1ubuntu1~20.04) over (10-20200411-0ubuntu1) ...
+Setting up libgcc-s1:amd64 (10.3.0-1ubuntu1~20.04) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libstdc++6:amd64 (10.3.0-1ubuntu1~20.04) over (10-20200411-0ubuntu1) ...
+Setting up libstdc++6:amd64 (10.3.0-1ubuntu1~20.04) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../libc6_2.31-0ubuntu9.2_amd64.deb ...
+Unpacking libc6:amd64 (2.31-0ubuntu9.2) over (2.31-0ubuntu9) ...
+Setting up libc6:amd64 (2.31-0ubuntu9.2) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../libgcrypt20_1.8.5-5ubuntu1.1_amd64.deb ...
+Unpacking libgcrypt20:amd64 (1.8.5-5ubuntu1.1) over (1.8.5-5ubuntu1) ...
+Setting up libgcrypt20:amd64 (1.8.5-5ubuntu1.1) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../00-gpg-wks-client_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpg-wks-client (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../01-dirmngr_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking dirmngr (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../02-gnupg-utils_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gnupg-utils (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../03-gpg-wks-server_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpg-wks-server (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../04-gpg-agent_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpg-agent (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../05-gpg_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpg (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../06-gpgconf_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpgconf (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../07-gnupg-l10n_2.2.19-3ubuntu2.1_all.deb ...
+Unpacking gnupg-l10n (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../08-gnupg_2.2.19-3ubuntu2.1_all.deb ...
+Unpacking gnupg (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../09-gpgsm_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpgsm (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Preparing to unpack .../10-libsqlite3-0_3.31.1-4ubuntu0.2_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.31.1-4ubuntu0.2) over (3.31.1-4) ...
+Preparing to unpack .../11-zlib1g_1%3a1.2.11.dfsg-2ubuntu1.2_amd64.deb ...
+Unpacking zlib1g:amd64 (1:1.2.11.dfsg-2ubuntu1.2) over (1:1.2.11.dfsg-2ubuntu1) ...
+Setting up zlib1g:amd64 (1:1.2.11.dfsg-2ubuntu1.2) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../libnettle7_3.5.1+really3.5.1-2ubuntu0.2_amd64.deb ...
+Unpacking libnettle7:amd64 (3.5.1+really3.5.1-2ubuntu0.2) over (3.5.1+really3.5.1-2) ...
+Setting up libnettle7:amd64 (3.5.1+really3.5.1-2ubuntu0.2) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../libhogweed5_3.5.1+really3.5.1-2ubuntu0.2_amd64.deb ...
+Unpacking libhogweed5:amd64 (3.5.1+really3.5.1-2ubuntu0.2) over (3.5.1+really3.5.1-2) ...
+Setting up libhogweed5:amd64 (3.5.1+really3.5.1-2ubuntu0.2) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../libp11-kit0_0.23.20-1ubuntu0.1_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.23.20-1ubuntu0.1) over (0.23.20-1build1) ...
+Setting up libp11-kit0:amd64 (0.23.20-1ubuntu0.1) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../libgnutls30_3.6.13-2ubuntu1.6_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.6.13-2ubuntu1.6) over (3.6.13-2ubuntu1) ...
+Setting up libgnutls30:amd64 (3.6.13-2ubuntu1.6) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../libldap-common_2.4.49+dfsg-2ubuntu1.8_all.deb ...
+Unpacking libldap-common (2.4.49+dfsg-2ubuntu1.8) over (2.4.49+dfsg-2ubuntu1) ...
+Preparing to unpack .../libldap-2.4-2_2.4.49+dfsg-2ubuntu1.8_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.49+dfsg-2ubuntu1.8) over (2.4.49+dfsg-2ubuntu1) ...
+Preparing to unpack .../gpgv_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpgv (2.2.19-3ubuntu2.1) over (2.2.19-3ubuntu2) ...
+Setting up gpgv (2.2.19-3ubuntu2.1) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../lz4_1.9.2-2ubuntu0.20.04.1_amd64.deb ...
+Unpacking lz4 (1.9.2-2ubuntu0.20.04.1) over (1.9.2-2) ...
+Preparing to unpack .../liblz4-1_1.9.2-2ubuntu0.20.04.1_amd64.deb ...
+Unpacking liblz4-1:amd64 (1.9.2-2ubuntu0.20.04.1) over (1.9.2-2) ...
+Setting up liblz4-1:amd64 (1.9.2-2ubuntu0.20.04.1) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../liblzma5_5.2.4-1ubuntu1_amd64.deb ...
+Unpacking liblzma5:amd64 (5.2.4-1ubuntu1) over (5.2.4-1) ...
+Setting up liblzma5:amd64 (5.2.4-1ubuntu1) ...
+(Reading database ... 33020 files and directories currently installed.)
+Preparing to unpack .../udev_245.4-4ubuntu3.14_amd64.deb ...
+Unpacking udev (245.4-4ubuntu3.14) over (245.4-4ubuntu3) ...
+Preparing to unpack .../libudev1_245.4-4ubuntu3.14_amd64.deb ...
+Unpacking libudev1:amd64 (245.4-4ubuntu3.14) over (245.4-4ubuntu3) ...
+Setting up libudev1:amd64 (245.4-4ubuntu3.14) ...
+(Reading database ... 33021 files and directories currently installed.)
+Preparing to unpack .../libblkid1_2.34-0.1ubuntu9.1_amd64.deb ...
+Unpacking libblkid1:amd64 (2.34-0.1ubuntu9.1) over (2.34-0.1ubuntu9) ...
+Setting up libblkid1:amd64 (2.34-0.1ubuntu9.1) ...
+(Reading database ... 33021 files and directories currently installed.)
+Preparing to unpack .../systemd-sysv_245.4-4ubuntu3.14_amd64.deb ...
+Unpacking systemd-sysv (245.4-4ubuntu3.14) over (245.4-4ubuntu3) ...
+Preparing to unpack .../login_1%3a4.8.1-1ubuntu5.20.04.1_amd64.deb ...
+Unpacking login (1:4.8.1-1ubuntu5.20.04.1) over (1:4.8.1-1ubuntu5) ...
+Setting up login (1:4.8.1-1ubuntu5.20.04.1) ...
+(Reading database ... 33021 files and directories currently installed.)
+Preparing to unpack .../libuuid1_2.34-0.1ubuntu9.1_amd64.deb ...
+Unpacking libuuid1:amd64 (2.34-0.1ubuntu9.1) over (2.34-0.1ubuntu9) ...
+Setting up libuuid1:amd64 (2.34-0.1ubuntu9.1) ...
+(Reading database ... 33021 files and directories currently installed.)
+Preparing to unpack .../libfdisk1_2.34-0.1ubuntu9.1_amd64.deb ...
+Unpacking libfdisk1:amd64 (2.34-0.1ubuntu9.1) over (2.34-0.1ubuntu9) ...
+Preparing to unpack .../libmount1_2.34-0.1ubuntu9.1_amd64.deb ...
+Unpacking libmount1:amd64 (2.34-0.1ubuntu9.1) over (2.34-0.1ubuntu9) ...
+Setting up libmount1:amd64 (2.34-0.1ubuntu9.1) ...
+(Reading database ... 33021 files and directories currently installed.)
+Preparing to unpack .../libsmartcols1_2.34-0.1ubuntu9.1_amd64.deb ...
+Unpacking libsmartcols1:amd64 (2.34-0.1ubuntu9.1) over (2.34-0.1ubuntu9) ...
+Setting up libsmartcols1:amd64 (2.34-0.1ubuntu9.1) ...
+(Reading database ... 33021 files and directories currently installed.)
+Preparing to unpack .../fdisk_2.34-0.1ubuntu9.1_amd64.deb ...
+Unpacking fdisk (2.34-0.1ubuntu9.1) over (2.34-0.1ubuntu9) ...
+Preparing to unpack .../util-linux_2.34-0.1ubuntu9.1_amd64.deb ...
+Unpacking util-linux (2.34-0.1ubuntu9.1) over (2.34-0.1ubuntu9) ...
+Setting up util-linux (2.34-0.1ubuntu9.1) ...
+(Reading database ... 33021 files and directories currently installed.)
+Preparing to unpack .../systemd-timesyncd_245.4-4ubuntu3.14_amd64.deb ...
+Unpacking systemd-timesyncd (245.4-4ubuntu3.14) over (245.4-4ubuntu3) ...
+Preparing to unpack .../libnss-systemd_245.4-4ubuntu3.14_amd64.deb ...
+Unpacking libnss-systemd:amd64 (245.4-4ubuntu3.14) over (245.4-4ubuntu3) ...
+Preparing to unpack .../libpam0g_1.3.1-5ubuntu4.3_amd64.deb ...
+Unpacking libpam0g:amd64 (1.3.1-5ubuntu4.3) over (1.3.1-5ubuntu4) ...
+Setting up libpam0g:amd64 (1.3.1-5ubuntu4.3) ...
+(Reading database ... 33021 files and directories currently installed.)
+Preparing to unpack .../libpam-modules-bin_1.3.1-5ubuntu4.3_amd64.deb ...
+Unpacking libpam-modules-bin (1.3.1-5ubuntu4.3) over (1.3.1-5ubuntu4) ...
+Setting up libpam-modules-bin (1.3.1-5ubuntu4.3) ...
+(Reading database ... 33023 files and directories currently installed.)
+Preparing to unpack .../libpam-modules_1.3.1-5ubuntu4.3_amd64.deb ...
+Unpacking libpam-modules:amd64 (1.3.1-5ubuntu4.3) over (1.3.1-5ubuntu4) ...
+Setting up libpam-modules:amd64 (1.3.1-5ubuntu4.3) ...
+(Reading database ... 33027 files and directories currently installed.)
+Preparing to unpack .../update-motd_3.6-0ubuntu6.1_all.deb ...
+Unpacking update-motd (3.6-0ubuntu6.1) over (3.6-0ubuntu6) ...
+Preparing to unpack .../libpam-runtime_1.3.1-5ubuntu4.3_all.deb ...
+Unpacking libpam-runtime (1.3.1-5ubuntu4.3) over (1.3.1-5ubuntu4) ...
+Setting up libpam-runtime (1.3.1-5ubuntu4.3) ...
+(Reading database ... 33027 files and directories currently installed.)
+Preparing to unpack .../00-dbus-user-session_1.12.16-2ubuntu2.1_amd64.deb ...
+Unpacking dbus-user-session (1.12.16-2ubuntu2.1) over (1.12.16-2ubuntu2) ...
+Preparing to unpack .../01-libx11-data_2%3a1.6.9-2ubuntu1.2_all.deb ...
+Unpacking libx11-data (2:1.6.9-2ubuntu1.2) over (2:1.6.9-2ubuntu1) ...
+Preparing to unpack .../02-libx11-6_2%3a1.6.9-2ubuntu1.2_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.6.9-2ubuntu1.2) over (2:1.6.9-2ubuntu1) ...
+Preparing to unpack .../03-dbus-x11_1.12.16-2ubuntu2.1_amd64.deb ...
+Unpacking dbus-x11 (1.12.16-2ubuntu2.1) over (1.12.16-2ubuntu2) ...
+Preparing to unpack .../04-dbus_1.12.16-2ubuntu2.1_amd64.deb ...
+vivek333@C272LCOK:/$ pmap
+
+Usage:
+ pmap [options] PID [PID ...]
+
+Options:
+ -x, --extended              show details
+ -X                          show even more details
+            WARNING: format changes according to /proc/PID/smaps
+ -XX                         show everything the kernel provides
+ -c, --read-rc               read the default rc
+ -C, --read-rc-from=<file>   read the rc from file
+ -n, --create-rc             create new default rc
+ -N, --create-rc-to=<file>   create new rc to file
+            NOTE: pid arguments are not allowed with -n, -N
+ -d, --device                show the device format
+ -q, --quiet                 do not display header and footer
+ -p, --show-path             show path in the mapping
+ -A, --range=<low>[,<high>]  limit results to the given range
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see pmap(1).
+vivek333@C272LCOK:/$ top
+top - 19:27:59 up  6:31,  0 users,  load average: 0.00, 0.06, 0.21
+Tasks:   9 total,   1 running,   8 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0
+MiB Mem :  12302.5 total,  10973.5 free,     94.4 used,   1234.6 buff/cach
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  11932.9 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+
+    1 root      20   0     900    528    464 S   0.0   0.0   0:00.01
+  614 root      20   0     900     84     20 S   0.0   0.0   0:00.00
+  615 root      20   0     900     84     20 S   0.0   0.0   0:00.79
+  616 vivek333  20   0   10172   5304   3448 S   0.0   0.0   0:00.66
+ 1719 root      20   0   10472   4140   3468 S   0.0   0.0   0:00.00
+ 1720 ram       20   0   10000   4924   3308 S   0.0   0.0   0:00.01
+ 1730 root      20   0   10472   4124   3448 S   0.0   0.0   0:00.01
+ 1731 vivek333  20   0   10000   5052   3440 S   0.0   0.0   0:00.01
+14614 vivek333  20   0   10884   3772   3248 R   0.0   0.0   0:00.00
+vivek333@C272LCOK:/$ last
+
+wtmp begins Thu Dec 30 19:59:28 2021
+vivek333@C272LCOK:/$ ps
+  PID TTY          TIME CMD
+  616 pts/0    00:00:00 bash
+ 1731 pts/0    00:00:00 bash
+14625 pts/0    00:00:00 ps
+vivek333@C272LCOK:/$ info
+vivek333@C272LCOK:/$ env
+SHELL=/bin/bash
+WSL_DISTRO_NAME=Ubuntu-20.04
+NAME=C272LCOK
+PWD=/
+LOGNAME=vivek333
+HOME=/home/vivek333
+LANG=C.UTF-8
+WSL_INTEROP=/run/WSL/615_interop
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LESSCLOSE=/usr/bin/lesspipe %s %s
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=vivek333
+SHLVL=3
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+MAIL=/var/mail/vivek333
+HOSTTYPE=x86_64
+OLDPWD=/home
+_=/usr/bin/env
+vivek333@C272LCOK:/$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sdb       263174212  2246084 247489972   1% /
+tmpfs            6298876        0   6298876   0% /mnt/wsl
+tools          247829500 74063068 173766432  30% /init
+none             6296792        0   6296792   0% /dev
+none             6298876       24   6298852   1% /run
+none             6298876        0   6298876   0% /run/lock
+none             6298876        0   6298876   0% /run/shm
+none             6298876        0   6298876   0% /run/user
+tmpfs            6298876        0   6298876   0% /sys/fs/cgroup
+drivers        247829500 74063068 173766432  30% /usr/lib/wsl/drivers
+lib            247829500 74063068 173766432  30% /usr/lib/wsl/lib
+C:\            247829500 74063068 173766432  30% /mnt/c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

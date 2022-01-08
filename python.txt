@@ -1,0 +1,92 @@
+vivek333@C272LCOK:/$ python3
+Python 3.8.10 (default, Nov 26 2021, 20:14:08)
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 5+7
+12
+>>> 45+56
+101
+>>> "hello"
+'hello'
+>>> 87-89
+-2
+>>> welcome all
+  File "<stdin>", line 1
+    welcome all
+            ^
+SyntaxError: invalid syntax
+>>> "welocme all"
+'welocme all'
+>>> 54*7
+378
+>>> 246/8
+30.75
+>>> name="kevin"
+>>> no=43
+>>> city="goa"
+>>> print("name is"+name+"city:"+ and No:"+str(no))
+>>> name is keviv city:goa and No:43
+if num >= 0:
+    print("Positive or Zero")
+else:
+    print("Negative number")
+
+Positive or Zero
+
+
+>>> num=2341
+>>> if(num<10):
+...     print(num, "is a single digit num")
+... elif(num<100):
+...     print(num, "is a double digit num")
+... elif(num<1000):
+...     print(num, "is a triple digit num")
+... elif(num<10000):
+...     print(num, "is a four digit num")
+...
+2341 is a four digit num
+
+>>> name =input("enter your name")
+enter your name kevin
+>>> print(name)
+ kevin
+
+>>> fruits =["apple","orange","pineapple","strawberry"]
+>>> print(fruits[2])
+pineapple
+>>> for name in fruits:
+...     print(name)
+...
+apple
+orange
+pineapple
+strawberry
+
+>>> def calculate(num):
+...     if(num>20):
+...             print(num*num)
+...     else:
+...             print(num+num)
+...
+>>> calculate(39)
+1521
+>>> calculate(14)
+28
+
+>>> class student:
+...     def setstudent(self,id,name,course):
+...             self.id=id
+...             self.name=name
+...             self.course=course
+...     def getstudent(self):
+...             print(self.id, " ", self.name, " ", self.course)
+...
+>>> std = student()
+>>> std.setstudent(123,"john","Python")
+>>> std.getstudent()
+123   john   Python
+>>> std.setstudent(123,"peter","Java")
+>>> std.getstudent()
+123   peter   Java
+pineapple
+strawberry
