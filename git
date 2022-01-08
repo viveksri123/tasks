@@ -30,4 +30,62 @@ On branch master
 nothing to commit, working tree clean
 PS C:\Users\USTUser\Desktop\task\new> git branch
 *master
+pro2
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Sat Jan 8 14:42:55 2022 +0530
+#
+# On branch paul
+#
+# Initial commit
+#
+# Changes to be committed:
+#       new file:   sample1.txt
+#       new file:   sample2.txt
+#       new file:   sample3.txt
+#
+~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            ~                                                                                                                                                                                            [paul e322e28] pro2
+ Date: Sat Jan 8 14:42:55 2022 +0530
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sample1.txt
+ create mode 100644 sample2.txt
+ create mode 100644 sample3.txt
+PS C:\Users\USTUser\Desktop\task\new>                                                                                                                                                        PS C:\Users\USTUser\Desktop\task\new> /COMMIT_EDITMSG [unix] (14:57 08/01/2022)                                                                                                       1,1 AllPS C:\Users\USTUser\Desktop\task\new> t/COMMIT_EDITMSG" [unix] 16L, 333B written
+PS C:\Users\USTUser\Desktop\task\new>
+PS C:\Users\USTUser\Desktop\task\new> git clone https://github.com/schacon/ticgit.git
+Cloning into 'ticgit'...
+remote: Enumerating objects: 1857, done.
+remote: Total 1857 (delta 0), reused 0 (delta 0), pack-reused 1857
+Receiving objects: 100% (1857/1857), 334.06 KiB | 886.00 KiB/s, done.
+Resolving deltas: 100% (837/837), done.
+PS C:\Users\USTUser\Desktop\task\new> cd .\ticgit\
+PS C:\Users\USTUser\Desktop\task\new\ticgit> git remote
+origin
+PS C:\Users\USTUser\Desktop\task\new\ticgit> git remote -v
+origin  https://github.com/schacon/ticgit.git (fetch)
+origin  https://github.com/schacon/ticgit.git (push)
+PS C:\Users\USTUser\Desktop\task\new\ticgit> git fetch pb
+fatal: 'pb' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\USTUser\Desktop\task\new\ticgit> git remote show origin
+* remote origin
+  Fetch URL: https://github.com/schacon/ticgit.git
+  Push  URL: https://github.com/schacon/ticgit.git
+  HEAD branch: master
+  Remote branches:
+    master tracked
+    ticgit tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+PS C:\Users\USTUser\Desktop\task\new\ticgit> git branch hello_world_sample
+PS C:\Users\USTUser\Desktop\task\new\ticgit> git branch
+  hello_world_sample
+* master
 
