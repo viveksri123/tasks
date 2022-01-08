@@ -1,0 +1,76 @@
+PS C:\Users\189904\Desktop\New folder> kubectl apply -f pod.yaml
+pod/demo created
+PS C:\Users\189904\Desktop\New folder> kubectl get pods
+NAME                      READY   STATUS             RESTARTS   AGE
+bb-demo-755955949-fk9lh   0/1     ImagePullBackOff   0          3h56m
+demo                      1/1     Running            0          11s
+PS C:\Users\189904\Desktop\New folder> kubectl logs demo
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+64 bytes from 8.8.8.8: seq=0 ttl=37 time=95.725 ms
+64 bytes from 8.8.8.8: seq=1 ttl=37 time=67.431 ms
+64 bytes from 8.8.8.8: seq=2 ttl=37 time=57.534 ms
+64 bytes from 8.8.8.8: seq=3 ttl=37 time=84.706 ms
+64 bytes from 8.8.8.8: seq=4 ttl=37 time=64.329 ms
+64 bytes from 8.8.8.8: seq=5 ttl=37 time=83.168 ms
+64 bytes from 8.8.8.8: seq=6 ttl=37 time=61.782 ms
+64 bytes from 8.8.8.8: seq=7 ttl=37 time=84.414 ms
+64 bytes from 8.8.8.8: seq=8 ttl=37 time=65.344 ms
+64 bytes from 8.8.8.8: seq=9 ttl=37 time=63.251 ms
+64 bytes from 8.8.8.8: seq=10 ttl=37 time=83.024 ms
+64 bytes from 8.8.8.8: seq=11 ttl=37 time=83.999 ms
+64 bytes from 8.8.8.8: seq=12 ttl=37 time=82.657 ms
+64 bytes from 8.8.8.8: seq=13 ttl=37 time=84.853 ms
+64 bytes from 8.8.8.8: seq=14 ttl=37 time=84.369 ms
+64 bytes from 8.8.8.8: seq=15 ttl=37 time=83.857 ms
+64 bytes from 8.8.8.8: seq=16 ttl=37 time=63.514 ms
+64 bytes from 8.8.8.8: seq=17 ttl=37 time=83.523 ms
+64 bytes from 8.8.8.8: seq=18 ttl=37 time=83.021 ms
+64 bytes from 8.8.8.8: seq=19 ttl=37 time=207.900 ms
+64 bytes from 8.8.8.8: seq=20 ttl=37 time=120.139 ms
+64 bytes from 8.8.8.8: seq=21 ttl=37 time=92.007 ms
+64 bytes from 8.8.8.8: seq=22 ttl=37 time=690.228 ms
+64 bytes from 8.8.8.8: seq=23 ttl=37 time=100.659 ms
+64 bytes from 8.8.8.8: seq=24 ttl=37 time=398.557 ms
+64 bytes from 8.8.8.8: seq=25 ttl=37 time=79.606 ms
+64 bytes from 8.8.8.8: seq=26 ttl=37 time=79.100 ms
+PS C:\Users\189904\Desktop\New folder>
+PS C:\Users\189904\Desktop\New folder> docker swarm init
+Swarm initialized: current node (zgzmloalmybxcd95t9x4mxlbn) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3gki8uopfhoz7ad9jjpbwsdv2jn70y7zt5fcqqb5h8jh1xpuqi-a6th4534ufov6e31ysnkikm9q 192.168.65.3:2377   
+
+
+PS C:\Users\189904\Desktop\New folder> docker service create --name demo alpine:3.5 ping 8.8.8.8
+image alpine:3.5 could not be accessed on a registry to record
+its digest. Each node will access alpine:3.5 independently,
+possibly leading to different nodes running different
+versions of the image.
+
+c53p9gj8iywtg4fc71dtfwje8
+overall progress: 1 out of 1 tasks
+1/1: running   [==================================================>]
+verify: Service converged
+PS C:\Users\189904\Desktop\New folder>
+PS C:\Users\189904\Desktop\New folder> docker service ps demo
+ID             NAME      IMAGE        NODE             DESIRED STATE   CURRENT STATE           ERROR     PORTS
+
+p5zsg9vsyyxx   demo.1    alpine:3.5   docker-desktop   Running         Running 2 minutes ago
+PS C:\Users\189904\Desktop\New folder> docker service rm demo
+demo
+PS C:\Users\189904\Desktop\New folder> kubectl apply -f bb.yaml 
+deployment.apps/bb-demo created
+service/bb-entrypoint created
+PS C:\Users\189904\Desktop\New folder> kubectl get deployments
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+bb-demo   0/1     1            0           23s
+PS C:\Users\189904\Desktop\New folder> kubectl get services
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+bb-entrypoint   NodePort    10.106.127.63   <none>        3000:30001/TCP   32s
+kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP          4h5m
+PS C:\Users\189904\Desktop\New folder>
+
+
+
+
