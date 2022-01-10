@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  bb-app:
+    image: findlove/simplewhale
+    ports:
+      - "80:80"
+
+
+cmds
+
+PS C:\Users\189904\Desktop\New folder> docker stack deploy -c bb-stack.yaml demo
+Updating service demo_bb-app (id: zxb5hkx9lia5a6n5n3yyfck2f)
+PS C:\Users\189904\Desktop\New folder> docker service ls
+ID             NAME            MODE         REPLICAS   IMAGE                         PORTS
+zxb5hkx9lia5   demo_bb-app     replicated   1/1        findlove/simplewhale:latest   *:80->80/tcp
+vde0bxirvcgi   my-prometheus   replicated   1/1        prom/prometheus:latest        *:9090->9090/tcp
+tzt426qw4oyl   ping_service    replicated   10/10      alpine:latest
+PS C:\Users\189904\Desktop\New folder> docker stack rm demo
+Removing service demo_bb-app
+Removing network demo_default
