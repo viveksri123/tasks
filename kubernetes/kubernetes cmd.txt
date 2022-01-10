@@ -71,6 +71,42 @@ bb-entrypoint   NodePort    10.106.127.63   <none>        3000:30001/TCP   32s
 kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP          4h5m
 PS C:\Users\189904\Desktop\New folder>
 
+PS C:\Users\189904\Desktop\New folder> docker stack deploy -c bb-stack.yaml demo
+Updating service demo_bb-app (id: zxb5hkx9lia5a6n5n3yyfck2f)
+PS C:\Users\189904\Desktop\New folder> docker service ls
+ID             NAME            MODE         REPLICAS   IMAGE                         PORTS
+zxb5hkx9lia5   demo_bb-app     replicated   1/1        findlove/simplewhale:latest   *:80->80/tcp
+vde0bxirvcgi   my-prometheus   replicated   1/1        prom/prometheus:latest        *:9090->9090/tcp
+tzt426qw4oyl   ping_service    replicated   10/10      alpine:latest
+PS C:\Users\189904\Desktop\New folder> docker stack rm demo
+Removing service demo_bb-app
+Removing network demo_default
+
+PS C:\> docker service create --replicas 1 --name my-prometheus `
+>>  --mount type=bind,source=C:/tmp/prometheus.yml,destination=/etc/prometheus/prometheus.yml `       
+>> --publish published=9090,target=9090,protocol=tcp `
+>>  prom/prometheus
+vde0bxirvcgiwtcg9vjl57aya
+1/1: running
+verify: Service converged
+PS C:\> docker service create `
+>> --replicas 10 `
+>> --name ping_service `
+>> alpine ping docker.com
+tzt426qw4oyldvrfs2mtl2ghm
+overall progress: 10 out of 10 tasks
+1/10: running
+2/10: running
+3/10: running
+4/10: running
+5/10: running
+6/10: running
+7/10: running
+8/10: running
+9/10: running
+10/10: running
+verify: Service converged
+
 
 
 
